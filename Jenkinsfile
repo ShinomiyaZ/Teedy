@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Doc') {
             steps {
-                sh 'mvn javadoc:javadoc --fail-never'
+                sh 'mvn javadoc:javadoc'
             }
         }
         
