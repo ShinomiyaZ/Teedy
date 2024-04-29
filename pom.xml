@@ -118,7 +118,7 @@
         <version>${org.eclipse.jetty.jetty-maven-plugin.version}</version>
       </plugin>
 
-      <plugin>
+      <!-- <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
         <version>3.21.2</version> or use version from pluginManagement
@@ -138,9 +138,9 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin> -->
 
-      <plugin> 
+      <!-- <plugin> 
         <groupId>org.jacoco</groupId> 
         <artifactId>jacoco-maven-plugin</artifactId> 
         <version>0.8.9</version> 
@@ -149,9 +149,9 @@
               <goals> 
                 <goal>prepare-agent</goal> 
               </goals> 
-            </execution> 
-            attached to Maven test phase 
-            <execution> 
+            </execution>  -->
+            <!-- attached to Maven test phase --> 
+            <!-- <execution> 
               <id>report</id> 
               <phase>test</phase> 
               <goals> 
@@ -159,7 +159,7 @@
               </goals> 
             </execution> 
         </executions> 
-      </plugin>
+      </plugin> -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
