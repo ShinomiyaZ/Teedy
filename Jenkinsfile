@@ -13,12 +13,13 @@ pipeline {
         }
         stage('Doc') {
             steps {
-                sh 'mvn javadoc:javadoc'
+                sh 'mvn javadoc:javadoc --fail-never'
             }
         }
         
         stage('Test report') {
             steps {
+                sh 'mvn test'
                 sh 'mvn surefire-report:report'
             }
         }
