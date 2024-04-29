@@ -19,9 +19,15 @@ pipeline {
         
         stage('Test report') {
             steps {
-                sh 'mvn test --fail-never'
-                sh 'mvn surefire-report:report'
+                sh 'mvn test'
             }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: '**/target/site/**', fingerprint: true
+            archiveArtifacts artifacts: '**/target/**/*.jar', fingerprint: true
+            archiveArtifacts artifacts: '**/target/**/*.war', fingerprint: true
         }
     }
 }
